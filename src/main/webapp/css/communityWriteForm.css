@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'LeeSeoyun', Nanum Gothic, 나눔고딕, 맑은고딕, 맑은 고딕, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+}
+
+#headerwrap {
+    width: 100%;
+}
+
+#header {
+    background-color: #fff;
+    color: white;
+}
+
+#topnav {
+    background-color: #A2DB5D;
+    text-align: right;
+    padding: 5px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#topnav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+#topawrap {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 5px 30px;
+}
+
+#topnav a:hover {
+    text-decoration: underline;
+}
+
+#menunav {
+    background-color: #ffffff;
+    border-top: 1px solid #EAF2DB;
+    border-bottom: 1px solid #EAF2DB;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#menunav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#menunav ul li {
+    position: relative;
+    display: inline-block;
+    color: #40423C;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: color 250ms ease-out;
+}
+
+#menunav ul li::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border-bottom: 2px solid #82B04B;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    transition: all 250ms ease-out;
+}
+
+#menunav ul li:hover {
+    color: #82B04B;
+}
+
+#menunav ul li:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+#menunav ul li a {
+	color: #40423C;
+	text-decoration: none;
+	display: block;
+	padding: 15px 20px;
+}
+
+#menunav ul li a:hover {
+	color: #82B04B;
+}
+
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+}
+
+/* Logo styling */
+#logowrap {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#logo img {
+    width: 150px;
+    height: auto;
+}
+
+#logo img:hover {
+    cursor: pointer;
+}
+
+#logo > span {
+	font-family: 'LeeSeoyun';
+	font-size: 22px;
+	font-weight: bold;
+	color: #b9b9b9;
+	margin-top: 3em;
+}
+
+#container {
+    padding: 20px;
+}
+
+#writeFormWrap {
+    padding: 20px;
+    background-color: #EEF7E2;
+    border: 1px solid #EEF7E2;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea {
+    font-family: 'LeeSeoyun';
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    font-family: 'LeeSeoyun';
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #A2DB5D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 1.0s ease-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #82B04B;
+    font-weight: bold;
+}
+
+.cancel-button {
+    display: inline-block;
+    font-family: 'LeeSeoyun';
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #EAF2DB;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 1.0s ease-out;
+}
+
+.cancel-button:hover {
+    background-color: #D0E4C9;
+    font-weight: bold;
+}
+
+#footer {
+    background-color: #A2DB5D;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#copyligth {
+    font-size: 14px;
+}

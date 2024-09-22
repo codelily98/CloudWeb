@@ -1,0 +1,390 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'LeeSeoyun', Nanum Gothic, 나눔고딕, 맑은고딕, 맑은 고딕, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0; /* Ensure there's no margin on the body */
+}
+
+/* Top navigation links */
+#topnav {
+    background-color: #A2DB5D;
+    text-align: right;
+    padding: 5px 20px;
+    width: 100%; /* Ensure it spans the full width */
+    box-sizing: border-box;
+    position: relative; /* Changed to relative so it flows within #wrap */
+}
+
+#topnav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+#topawrap {
+	width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 5px 30px;
+}
+
+#topnav a:hover {
+    text-decoration: underline;
+}
+
+/* Main menu navigation styling */
+#menunav {
+    background-color: #ffffff;
+    border-top: 1px solid #EAF2DB;
+    border-bottom: 1px solid #EAF2DB;
+    width: 100%; /* Ensure it spans the full width */
+    box-sizing: border-box;
+    margin-top: 0; /* Ensure no additional margin is added */
+    padding-top: 0; /* Ensure no padding above */
+}
+
+/* Fix the positioning of #menunav */
+#menunav {
+    margin-top: 10px; /* Add space between #logowrap and #menunav */
+}
+
+#menunav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#menunav ul li {
+    position: relative;
+    display: inline-block;
+    color: #40423C;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: color 250ms ease-out;
+}
+
+#menunav ul li::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border-bottom: 2px solid #82B04B;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    transition: all 250ms ease-out;
+}
+
+#menunav ul li:hover {
+    color: #82B04B;
+}
+
+#menunav ul li:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+#menunav ul li a {
+	color: #40423C;
+	text-decoration: none;
+	display: block;
+	padding: 15px 20px;
+}
+
+#menunav ul li a:hover {
+	color: #82B04B;
+}
+
+#header {
+    background-color: #fff;
+    color: white;
+    position: relative;
+}
+
+/* Logo styling */
+#logowrap {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#logo img {
+    width: 150px;
+    height: auto;
+}
+
+#logo img:hover {
+    cursor: pointer;
+}
+
+#logo > span {
+	font-family: 'LeeSeoyun';
+	font-size: 22px;
+	font-weight: bold;
+	color: #b9b9b9;
+	margin-top: 3em;
+}
+
+#noid, #noid > a {
+	text-align: center;
+	text-decoration: none;
+	color: #A2DB5D;	
+}
+
+#noid > a:hover {
+	color: #82B04B;
+	font-weight: bold;
+}
+
+/* 메인 컨텐츠 스타일 */
+#wrap {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#container {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #EEF7E2;
+}
+
+#userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#inputwrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#inputwrap div {
+    margin-bottom: 15px;
+}
+
+#checkinput {
+	font-family: 'LeeSeoyun';
+	color: red;
+	font-size: 12px;
+	margin-left: 0.5em;
+	margin-top: -0.4em;
+	margin-bottom: 1em;
+	padding-bottom: 0.4em;
+}
+
+/* Gender radio button styling */
+#inputgender {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+#inputgender input[type="radio"] {
+    display: none; /* 라디오 버튼 숨기기 */
+}
+
+#inputgender input[type="radio"] + .radio-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 265px; /* 버튼의 최소 너비 설정 */
+    padding: 10px 0; /* 상하 여백 조정 */
+    border: 1px solid #A2DB5D;
+    background-color: #ffffff;
+    color: #82B04B;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: -1em;
+    margin-bottom: -0.1em;
+}
+
+#inputgender input[type="radio"]:checked + .radio-btn {
+    background-color: #82B04B;
+    color: #ffffff;
+}
+
+/* Email input styling */
+#inputemail {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 간격 설정 */
+}
+
+#inputemail input[type="email"] {
+    width: calc(33% - 10px); /* 각 이메일 필드의 너비를 설정 (총 3개의 필드와 간격 고려) */
+}
+
+/* Tel input styling */
+#inputtel {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 간격 설정 */
+}
+
+#inputtel input[type="tel"] {
+    width: calc(33% - 10px); /* 전화번호 필드의 너비를 설정 */
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], select {
+    font-family: 'LeeSeoyun';
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder, input[type="email"]::placeholder, input[type="tel"]::placeholder {
+    color: #999;
+}
+
+input:focus {
+    outline: 2px solid #82B04B;
+}
+
+button {
+	font-family: 'LeeSeoyun';
+    padding: 10px;
+    background-color: #A2DB5D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #82B04B;
+}
+
+#btnwrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="button"] {
+	font-family: 'LeeSeoyun';
+	width: 263px;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #A2DB5D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#deletebtn {
+	background-color: #6F9640;
+	margin-top: 0.7em;
+	width: 545px;
+}
+
+#deletebtn:hover {
+	background-color: #557331;
+}
+
+input[type="button"]:hover {
+    background-color: #82B04B;
+}
+
+/* Specific styling for zipcode search */
+#zipcode-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#zipcode-container input[type="text"] {
+    flex: 1;
+}
+
+#zipcode-container button {
+    flex-shrink: 0;
+}
+#addr1 {
+	margin-bottom: 15px;
+}
+
+/* 에러 메시지 */
+#checkinput {
+    color: red;
+    font-size: 12px;
+}
+
+/* 하단 푸터 */
+#footer {
+    background-color: #A2DB5D;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Sweet2 모달 css */
+#swal-id, #swal-pwd {
+	border-style: none;
+	font-family: 'LeeSeoyun';
+	font-size: 16px;
+	width: 350px;
+	height: 2em;
+	border-radius: 10px;
+}
+#swal-id:focus, #swal-pwd:focus {
+	border: 4px solid #82B04B;	
+}
+.custom-confirm-button {
+	margin-right: 2em;	
+}
+
+.custom-confirm-button, .custom-cancel-button, .custom-confirm2-button {
+	text-align: center;
+	align-items: center;
+	justify-content: cetner;
+	font-family: 'LeeSeoyun';
+	font-size: 16px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #A2DB5D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    border-radius: 10px;
+    transition: background-color 1.0s ease-out;
+}
+
+.custom-confirm-button:hover, .custom-cancel-button:hover {
+    background-color: #82B04B;
+    font-weight: bold;
+}

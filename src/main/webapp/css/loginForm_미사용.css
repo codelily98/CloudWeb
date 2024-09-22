@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'LeeSeoyun', Nanum Gothic, 나눔고딕, 맑은고딕, 맑은 고딕, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0; /* Ensure there's no margin on the body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#wrap {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+#logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#logo img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+#logo img:hover {
+	cursor: pointer;
+}
+
+#logo h2 {
+    font-family: 'LeeSeoyun';
+    font-size: 24px;
+    margin-top: 10px;
+	font-weight: bold;
+	color: #b9b9b9;
+}
+
+/* Login wrapper styling */
+#loginwrap {
+    background-color: #EEF7E2;
+    border: 1px solid #EEF7E2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Max width for better control */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputwrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#inwrap, #pwdwrap {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
+	font-family: 'LeeSeoyun';
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color: #999;
+}
+
+input:focus {
+	outline: 2px solid #82B04B;
+}
+
+/* Button styling */
+#loginbtn {
+    padding: 10px;
+    background-color: #A2DB5D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#loginbtn:hover {
+    background-color: #82B04B;
+}
+
+/* Links styling */
+#locationa {
+	color: #A2DB5D;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#locationa a {
+    color: #A2DB5D;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#locationa a:hover {
+	color: #82B04B;
+	font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #wrap {
+        padding: 10px;
+    }
+
+    #loginwrap {
+        padding: 15px;
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    #logo img {
+        width: 80px; /* Smaller logo for small screens */
+    }
+
+    #logo h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="password"], #loginbtn {
+        font-size: 14px; /* Adjust font size for small screens */
+    }
+
+    #locationa {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #loginwrap {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    #logo img {
+        width: 60px; /* Even smaller logo for very small screens */
+    }
+
+    #logo h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"], input[type="password"], #loginbtn {
+        font-size: 12px; /* Smaller font size for very small screens */
+    }
+
+    #locationa {
+        font-size: 10px;
+        margin: 10px 0;
+    }
+}
